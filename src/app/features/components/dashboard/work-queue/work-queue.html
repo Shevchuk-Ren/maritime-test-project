@@ -18,47 +18,47 @@
   </div>
 </div>
 <div class="table-container">
-<app-custom-table [columns]="columns" [data]="table.filteredRows()" [striped]="true">
-  <!-- ORIGINATOR -->
-  <ng-template tableCell="originator" let-row>
-    <div class="wq-originator">
-      <div class="wq-avatar">
-        {{ row.originator | initials }}
+  <app-custom-table [columns]="columns" [data]="tasks.filteredTasks()" [striped]="true">
+    <!-- ORIGINATOR -->
+    <ng-template tableCell="originator" let-row>
+      <div class="wq-originator">
+        <div class="wq-avatar">
+          {{ row.originator | initials }}
+        </div>
+        <span class="wq-name">{{ row.originator }}</span>
       </div>
-      <span class="wq-name">{{ row.originator }}</span>
-    </div>
-  </ng-template>
+    </ng-template>
 
-  <!-- CLIENT/LINE (2 lines) -->
-  <ng-template tableCell="client" let-row>
-    <div class="wq-client">
-      <div class="wq-client__primary">{{ row.client }}</div>
-      <div class="wq-client__secondary">{{ row.line }}</div>
-    </div>
-  </ng-template>
+    <!-- CLIENT/LINE (2 lines) -->
+    <ng-template tableCell="client" let-row>
+      <div class="wq-client">
+        <div class="wq-client__primary">{{ row.client }}</div>
+        <div class="wq-client__secondary">{{ row.line }}</div>
+      </div>
+    </ng-template>
 
-  <!-- STATUS (dot + label) -->
-  <ng-template tableCell="status" let-row>
-    <div class="wq-status">
-      <span class="wq-dot" [class]="statusDotClass(row.status)"></span>
-      <span class="wq-status__text">{{ statusLabel(row.status) }}</span>
-    </div>
-  </ng-template>
+    <!-- STATUS (dot + label) -->
+    <ng-template tableCell="status" let-row>
+      <div class="wq-status">
+        <span class="wq-dot" [class]="statusDotClass(row.status)"></span>
+        <span class="wq-status__text">{{ statusLabel(row.status) }}</span>
+      </div>
+    </ng-template>
 
-  <!-- ACTIONS -->
-  <ng-template tableCell="actions" let-row>
-    <app-button
-      variant="action"
-      aria-label="Row actions"
-      class="wq-actions"
-      (click)="onRowActions(row)"
-    >
-      <svg class="wq-actions__icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-        <circle cx="12" cy="5" r="1.5" />
-        <circle cx="12" cy="12" r="1.5" />
-        <circle cx="12" cy="19" r="1.5" />
-      </svg>
-    </app-button>
-  </ng-template>
-</app-custom-table>
+    <!-- ACTIONS -->
+    <ng-template tableCell="actions" let-row>
+      <app-button
+        variant="action"
+        aria-label="Row actions"
+        class="wq-actions"
+        (click)="onRowActions(row)"
+      >
+        <svg class="wq-actions__icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <circle cx="12" cy="5" r="1.5" />
+          <circle cx="12" cy="12" r="1.5" />
+          <circle cx="12" cy="19" r="1.5" />
+        </svg>
+      </app-button>
+    </ng-template>
+  </app-custom-table>
 </div>

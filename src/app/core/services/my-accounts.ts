@@ -163,7 +163,6 @@ export class MyAccountsService {
 
   // ===== helpers =====
   private sortValue(row: AccountRow, key: SortKey): number | string {
-    console.log(key, 'key')
     switch (key) {
       case 'renewalDate':
         return this.parseDate(row.renewalDate);

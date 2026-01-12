@@ -64,7 +64,6 @@ export class MyAccountsComponent implements OnInit {
   }
 
   onGroupClick(): void {
-    console.log('group')
     this.accounts.toggleGroup();
   }
 
