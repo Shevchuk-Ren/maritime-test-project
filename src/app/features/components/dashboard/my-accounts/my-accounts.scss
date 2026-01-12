@@ -55,6 +55,25 @@
 }
 .table-container {
   min-height: 300px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  scrollbar-width: thin;
+  scrollbar-color: #313b54 #2a3146;
+}
+.table-container::-webkit-scrollbar {
+  height: 4px;
+}
+.table-container::-webkit-scrollbar-track {
+  background:#2a3146;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #313b54;
+  border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3b82f6;
 }
 
 @media (max-width: 900px) {
