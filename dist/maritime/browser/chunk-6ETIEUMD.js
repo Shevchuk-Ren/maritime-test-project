@@ -1,1 +1,0 @@
-import{Ca as n,Xa as c,Ya as o,lb as s}from"./chunk-HEXECREK.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-accounts"]],decls:2,vars:0,template:function(e,p){e&1&&(c(0,"p"),s(1,"accounts works!"),o())},styles:["[_nghost-%COMP%]{display:block}"],changeDetection:0})};export{a as AccountsPage};
