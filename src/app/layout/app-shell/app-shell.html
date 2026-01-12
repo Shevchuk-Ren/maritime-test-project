@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="container">
+    <div class="app-header__row">
+      <h1 class="app-header__title">
+        Hi {{ userService.userName() }}, welcome! You have
+        <span> {{ userService.totalOpenTasks() }} open tasks </span>
+      </h1>
+
+      <div class="app-header__actions">
+        <form class="app-header__search" role="search" (submit)="$event.preventDefault()">
+          <app-serch-input
+            height="48px"
+            minWidth="479px"
+            placeholder="Search"
+            [(ngModel)]="globalSearch"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <label for="global-search" class="sr-only">Search</label>
+        </form>
+
+        <app-avatar>
+          {{ userService.userName() | initials }}
+        </app-avatar>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <app-navigation></app-navigation>
+  </div>
+  <div class="container bottom">
+    <router-outlet />
+  </div>
+</main>

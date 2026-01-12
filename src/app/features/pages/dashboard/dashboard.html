@@ -1,0 +1,28 @@
+<section class="dashboard__top" aria-label="Dashboard overview">
+  <div class="dashboard__work">
+    <app-add-cards title="Work Queue" class="dashCard dashCard--fill">
+      <app-work-queue></app-work-queue>
+    </app-add-cards>
+  </div>
+
+  <div class="dashboard__portfolio">
+    <app-add-cards title="Portfolio goals" class="dashCard dashCard--fill">
+      <app-portfolio-goals></app-portfolio-goals>
+    </app-add-cards>
+  </div>
+
+  <div class="dashboard__right">
+    <app-add-cards title="Quick actions" class="dashCard dashCard--stack" padding="16px 26px">
+      <app-quick-actions></app-quick-actions>
+    </app-add-cards>
+
+    <app-add-cards title="Market intelligence" class="dashCard dashCard--stack" padding="16px 26px">
+      <app-market-inteligence></app-market-inteligence>
+    </app-add-cards>
+  </div>
+</section>
+<section class="dashboard__bottom" aria-label="My accounts">
+  <app-add-cards class="fill-card">
+    <app-my-accounts></app-my-accounts>
+  </app-add-cards>
+</section>

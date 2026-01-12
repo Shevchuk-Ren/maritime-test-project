@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+.actions-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.actions-btn:not(:last-child) {
+  margin-bottom: 5px;
+}

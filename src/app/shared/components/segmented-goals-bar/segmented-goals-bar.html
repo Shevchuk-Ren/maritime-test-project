@@ -1,0 +1,42 @@
+<article class="sg">
+  <div class="sg__head">
+    <div class="sg__label">{{ goal().title }}</div>
+    <!-- optional right subtitle (like 10.4%) if you later add it -->
+  </div>
+
+  <div class="sg__barWrap">
+    <!-- marker above (target) -->
+    @if (goal().targetMarker) {
+      <div class="sg__marker sg__marker--above" [style.left.%]="clampPct(goal().targetMarker!.pct)">
+        <div class="sg__markerLabel sg__markerLabel--blue">{{ goal().targetMarker!.label }}</div>
+        <div class="sg__tri sg__tri--blue"></div>
+      </div>
+    }
+
+    <!-- segmented bar -->
+    <div
+      class="sg__bar"
+      [style.height.px]="barH()"
+      [style.border-top-right-radius.px]="r()"
+      [style.border-bottom-right-radius.px]="r()"
+    >
+      @for (s of goal().segments; track $index) {
+        <div class="sg__seg" [class]="'sg__seg--' + s.tone" [style.width.%]="s.value"></div>
+      }
+
+      @if (goal().actualTextInBar) {
+        <div class="sg__inbarText">{{ goal().actualTextInBar }}</div>
+      }
+    </div>
+
+    <!-- marker below (actual) -->
+    @if (goal().actualMarker) {
+      <div class="sg__marker sg__marker--below" [style.left.%]="clampPct(goal().actualMarker!.pct)">
+        <div class="sg__tri sg__tri--green"></div>
+        <div class="sg__markerLabel sg__markerLabel--green">
+          {{ goal().actualMarker!.label }}
+        </div>
+      </div>
+    }
+  </div>
+</article>

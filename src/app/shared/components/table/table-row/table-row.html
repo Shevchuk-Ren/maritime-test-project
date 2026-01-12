@@ -1,0 +1,95 @@
+<!-- Originator -->
+<td class="task-row__cell task-row__cell--originator">
+  <div class="task-row__originator">
+    <div class="task-row__avatar">
+      {{ row().originator | initials }}
+    </div>
+    <span class="task-row__name">{{ row().originator }}</span>
+  </div>
+</td>
+
+<!-- Client/Line -->
+<td class="task-row__cell">
+  <div class="task-row__primary">{{ row().client }}</div>
+  <div class="task-row__secondary">{{ row().line }}</div>
+</td>
+
+<!-- Type -->
+<td class="task-row__cell">
+  <span class="task-row__primary">{{ row().type }}</span>
+</td>
+
+<!-- Status -->
+<td class="task-row__cell">
+  <div class="task-row__status">
+    @switch (row().status) {
+      @case ('new') {
+        <span class="task-row__dot task-row__dot--blue"></span>
+        <span class="task-row__status-text">New</span>
+      }
+      @case ('pending') {
+        <span class="task-row__dot task-row__dot--yellow"></span>
+        <span class="task-row__status-text">Pending Review</span>
+      }
+      @case ('completed') {
+        <span class="task-row__dot task-row__dot--green"></span>
+        <span class="task-row__status-text">Completed</span>
+      }
+    }
+  </div>
+</td>
+
+<td class="task-row__cell task-row__cell--originator">
+  <div class="task-row__originator">
+    <div class="task-row__avatar">
+      {{ row().originator | initials }}
+    </div>
+    <span class="task-row__name">{{ row().originator }}</span>
+  </div>
+</td>
+
+<td class="task-row__cell">
+  <div class="task-row__primary">{{ row().client }}</div>
+  <div class="task-row__secondary">{{ row().line }}</div>
+</td>
+
+<td class="task-row__cell">
+  <span class="task-row__primary">{{ row().type }}</span>
+</td>
+
+<td class="task-row__cell">
+  <div class="task-row__status">
+    @switch (row().status) {
+      @case ('new') {
+        <span class="task-row__dot task-row__dot--blue"></span>
+        <span class="task-row__status-text">New</span>
+      }
+      @case ('pending') {
+        <span class="task-row__dot task-row__dot--yellow"></span>
+        <span class="task-row__status-text">Pending Review</span>
+      }
+      @case ('completed') {
+        <span class="task-row__dot task-row__dot--green"></span>
+        <span class="task-row__status-text">Completed</span>
+      }
+      @default {
+        <span class="task-row__dot"></span>
+        <span class="task-row__status-text">{{ row().status }}</span>
+      }
+    }
+  </div>
+</td>
+
+<td class="task-row__cell">
+  <span class="task-row__nowrap">{{ row().created }}</span>
+</td>
+
+<td class="task-row__cell task-row__cell--actions">
+  <button type="button" class="task-row__actions" aria-label="Row actions">
+    <svg class="task-row__actions-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="5" r="1.5" />
+      <circle cx="12" cy="12" r="1.5" />
+      <circle cx="12" cy="19" r="1.5" />
+    </svg>
+  </button>
+</td>

@@ -1,0 +1,28 @@
+@use '../../../../styles.scss' as *;
+
+:host {
+  display: block;
+}
+
+.ui-input {
+  padding: 0 18px;
+  border-radius: 20px;
+  background: var(--bg-surface);
+  color: var(--input-text);
+  border: 0;
+  outline: none;
+  font-size: $font-size-18;
+  line-height: 16px;
+
+  transition:
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+}
+
+.ui-input::placeholder {
+  color: #596275;
+}
+/* Focus ring як у вас */
+.ui-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--input-focus);
+}

@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .wrapper-content {
+    height: 100%;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  border: 1px solid var(--stroke);
+  border-radius: var(--r-card-lg);
+  width: 'fit content';
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}

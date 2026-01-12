@@ -1,0 +1,12 @@
+<div class="actions-wrap">
+  @for (item of itemList(); track item.id) {
+    <app-button
+      class="actions-btn"
+      [variant]="'primary'"
+      [widthPx]="'100%'"
+      [fontSize]="15"
+      [heightPx]="40"
+      >{{ item.title }}</app-button
+    >
+  }
+</div>

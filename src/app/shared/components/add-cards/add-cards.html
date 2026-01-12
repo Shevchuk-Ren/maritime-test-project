@@ -1,0 +1,18 @@
+<div
+  class="wrapper"
+  [ngStyle]="{
+    background: background(),
+    title: title(),
+    padding: padding(),
+  }"
+>
+  @if (title()) {
+    <h2>
+      {{ title() }}
+    </h2>
+  }
+
+  <div class="wrapper-content">
+    <ng-content></ng-content>
+  </div>
+</div>

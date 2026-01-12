@@ -1,0 +1,63 @@
+<div class="workq__header">
+  <div class="workq__tabs" role="tablist" aria-label="Work queue filters">
+    @for (f of tasks.filters(); track f.category) {
+      <app-button
+        variant="tab"
+        [heightPx]="32"
+        [paddingX]="12"
+        [bg]="tasks.activeFilter() === f.category ? 'var(--blue)' : '#0C0F17'"
+        [border]="tasks.activeFilter() === f.category ? 'var(--blue)' : '#0C0F17'"
+        [text]="tasks.activeFilter() === f.category ? '#ffffff' : '#C5CAD3'"
+        role="tab"
+        [attr.aria-selected]="tasks.activeFilter() === f.category"
+        (clicked)="setTab(f.category)"
+      >
+        {{ label(f.category) }} ({{ f.count }})
+      </app-button>
+    }
+  </div>
+</div>
+
+<app-custom-table [columns]="columns" [data]="table.filteredRows()" [striped]="true">
+  <!-- ORIGINATOR -->
+  <ng-template tableCell="originator" let-row>
+    <div class="wq-originator">
+      <div class="wq-avatar">
+        {{ row.originator | initials }}
+      </div>
+      <span class="wq-name">{{ row.originator }}</span>
+    </div>
+  </ng-template>
+
+  <!-- CLIENT/LINE (2 lines) -->
+  <ng-template tableCell="client" let-row>
+    <div class="wq-client">
+      <div class="wq-client__primary">{{ row.client }}</div>
+      <div class="wq-client__secondary">{{ row.line }}</div>
+    </div>
+  </ng-template>
+
+  <!-- STATUS (dot + label) -->
+  <ng-template tableCell="status" let-row>
+    <div class="wq-status">
+      <span class="wq-dot" [class]="statusDotClass(row.status)"></span>
+      <span class="wq-status__text">{{ statusLabel(row.status) }}</span>
+    </div>
+  </ng-template>
+
+  <!-- ACTIONS -->
+  <ng-template tableCell="actions" let-row>
+    <app-button
+      variant="action"
+      aria-label="Row actions"
+      class="wq-actions"
+      (click)="onRowActions(row)"
+    >
+      <svg class="wq-actions__icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+        <circle cx="12" cy="5" r="1.5" />
+        <circle cx="12" cy="12" r="1.5" />
+        <circle cx="12" cy="19" r="1.5" />
+      </svg>
+    </app-button>
+  </ng-template>
+</app-custom-table>

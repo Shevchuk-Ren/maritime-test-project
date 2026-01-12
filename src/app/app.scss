@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+.dashboard-container {
+  background-color: #181818;
+  color: white;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  margin-right: 15px;
+}
+
+.performance-metrics,
+.account-status,
+.policies,
+.communications {
+  margin-bottom: 20px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+}
+
+.policy,
+.communication {
+  padding: 10px;
+  background: #2c2c2c;
+  margin-bottom: 10px;
+}

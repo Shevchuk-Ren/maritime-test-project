@@ -1,0 +1,103 @@
+:host {
+  display: block;
+}
+
+.ui-table__scroll {
+  overflow-x: auto;
+}
+
+/* Table base */
+.ui-table__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.ui-table__table--fixed {
+  table-layout: fixed;
+}
+
+/* Header bar (as in your design) */
+.ui-table__head-row {
+  height: 32px;
+  background: var(--bg-surface-3);
+  border-bottom: 1px solid #293245;
+}
+
+.ui-table__th {
+  padding: 8px 16px;
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.ui-table__th:first-child {
+  padding-left: 24px;
+}
+.ui-table__th:last-child {
+  padding-right: 24px;
+}
+
+.ui-table__th--right {
+  text-align: right;
+}
+.ui-table__th--center {
+  text-align: center;
+}
+
+/* Row striping */
+.ui-table__tbody--striped tr:nth-child(odd) {
+  background: var(--bg-surface);
+}
+.ui-table__tbody--striped tr:nth-child(even) {
+  background: var(--bg-surface-3);
+}
+
+.ui-table__td {
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  vertical-align: middle;
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.ui-table__td:first-child {
+  padding-left: 24px;
+}
+.ui-table__td:last-child {
+  padding-right: 24px;
+}
+
+.ui-table__td--right {
+  text-align: right;
+}
+.ui-table__td--center {
+  text-align: center;
+}
+
+.ui-table__empty {
+  padding: 16px 24px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* sr-only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,46 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  color: $color-text-primary;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-light;
+
+  @include respond-to('md') {
+    font-size: $font-size-2xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+.text-primary {
+  color: $color-text-primary;
+}
+
+.text-secondary {
+  color: $color-text-secondary;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-accent {
+  color: $color-accent-primary;
+}

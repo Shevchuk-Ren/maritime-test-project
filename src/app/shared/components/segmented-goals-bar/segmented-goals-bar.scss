@@ -1,0 +1,101 @@
+:host {
+  display: block;
+}
+.sg__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.sg__label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 8px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.sg__barWrap {
+  position: relative;
+  padding-top: 26px; // space for top label + arrow
+  padding-bottom: 26px; // space for bottom arrow + label
+}
+
+.sg__bar {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background: var(--track);
+  border-radius: 0;
+}
+
+.sg__seg {
+  height: 100%;
+}
+.sg__seg--green {
+  background: var(--green);
+}
+.sg__seg--yellow {
+  background: var(--yellow);
+}
+.sg__seg--red {
+  background: var(--red);
+}
+.sg__seg--muted {
+  background: var(--track);
+}
+
+.sg__inbarText {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* markers */
+.sg__marker {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.sg__marker--above {
+  top: 0;
+}
+.sg__marker--below {
+  bottom: 0;
+}
+
+.sg__markerLabel {
+  font-size: 11px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.sg__markerLabel--blue {
+  color: var(--blue);
+}
+.sg__markerLabel--green {
+  color: var(--green);
+}
+
+/* triangle arrows */
+.sg__tri {
+  width: 0;
+  height: 0;
+  margin: 2px auto;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.sg__tri--blue {
+  border-top: 8px solid var(--blue);
+} // down arrow
+.sg__tri--green {
+  border-bottom: 8px solid var(--green);
+} // up arrow

@@ -1,0 +1,71 @@
+:host {
+  display: block;
+}
+.mg__title {
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-2);
+  margin-bottom: 10px;
+}
+
+.mg__row {
+  display: grid;
+  grid-template-columns: 1fr 56px;
+  gap: 16px;
+  align-items: center;
+}
+
+.mg__barCol {
+  min-width: 0;
+}
+
+.mg__bar {
+  position: relative;
+  background: var(--track);
+  overflow: hidden;
+  border-radius: 0; /* square-left */
+}
+
+.mg__fill {
+  height: 100%;
+  border-radius: 0; /* square-left */
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue-2) 60%, var(--track) 100%);
+}
+
+.mg__badge {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mg__badgePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mg__pct {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--text-2);
+}
+
+.mg__target {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+}

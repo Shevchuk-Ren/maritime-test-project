@@ -1,0 +1,143 @@
+<div class="ma-head">
+  <h2 id="ma-title" class="ma-head__title">My accounts</h2>
+
+  <div class="ma-head__controls">
+    <form class="ma-head__search" role="search" (submit)="$event.preventDefault()">
+      <app-serch-input
+        placeholder="Search"
+        maxWidth="300px"
+        height="28px"
+        fontSize="16px"
+        [(ngModel)]="search"
+        [ngModelOptions]="{ standalone: true }"
+        (ngModelChange)="onSearch($event)"
+        background="#232838"
+      ></app-serch-input>
+    </form>
+
+    <div class="ma-head__buttons" role="group" aria-label="Account table actions">
+      <app-button
+        variant="outline"
+        [heightPx]="28"
+        [paddingX]="22"
+        [bg]="'var(--bg-surface)'"
+        [border]="'var(--blue)'"
+        [text]="'var(--blue)'"
+        (clicked)="onFilterClick()"
+      >
+        Filter
+      </app-button>
+
+      <app-button
+        variant="outline"
+        [heightPx]="28"
+        [paddingX]="22"
+        [bg]="'var(--bg-surface)'"
+        [border]="'var(--blue)'"
+        [text]="'var(--blue)'"
+        (clicked)="onSortClick()"
+      >
+        Sort
+      </app-button>
+
+      <app-button
+        variant="outline"
+        [heightPx]="28"
+        [paddingX]="22"
+        [bg]="'var(--bg-surface)'"
+        [border]="'var(--blue)'"
+        [text]="'var(--blue)'"
+        (clicked)="onGroupClick()"
+      >
+        Group
+      </app-button>
+
+      <!-- + New: filled blue -->
+      <app-button variant="primary" [heightPx]="28" [paddingX]="22"> + New </app-button>
+    </div>
+  </div>
+</div>
+
+<div class="table-container">
+  <app-custom-table
+    class="ma-table"
+    [columns]="columns"
+    [data]="accounts.filteredAccounts()"
+    minWidth="1200px"
+    [striped]="true"
+  >
+    <!-- NAME (2 lines) -->
+    <ng-template tableCell="name" let-row>
+      <div class="ma-name">
+        <div class="ma-name__primary">{{ row.name }}</div>
+        <div class="ma-name__secondary">{{ row.subtitle }}</div>
+      </div>
+    </ng-template>
+
+    <!-- RENEWAL DATE -->
+    <ng-template tableCell="renewalDate" let-row>
+      <span class="ma-date">{{ row.renewalDate }}</span>
+    </ng-template>
+
+    <!-- PREMIUM (blue) -->
+    <ng-template tableCell="premium" let-row>
+      <span class="ma-premium">{{ row.premium }}</span>
+    </ng-template>
+
+    <!-- LOSS RATIO pill -->
+    <ng-template tableCell="lossRatio" let-row>
+      <span class="ma-loss" [class]="'ma-loss--' + lossTone(row.lossRatio)">
+        {{ row.lossRatio }}%
+      </span>
+    </ng-template>
+
+    <!-- APPETITE pill (один стиль для всіх) -->
+    <ng-template tableCell="appetite" let-row>
+      <span class="ma-appetite">{{ row.appetite }}</span>
+    </ng-template>
+
+    <!-- STATUS dot + text -->
+    <ng-template tableCell="status" let-row>
+      <div class="ma-status">
+        <span class="ma-status__dot" [class.ma-status__dot--green]="row.status === 'Active'"></span>
+        <span class="ma-status__text">{{ row.status }}</span>
+      </div>
+    </ng-template>
+
+    <!-- TRIAGE pill -->
+    <ng-template tableCell="triage" let-row>
+      <span class="ma-triage">{{ row.triage }}</span>
+    </ng-template>
+
+    <!-- WINNABILITY chip -->
+    <ng-template tableCell="winnability" let-row>
+      <span class="ma-win">
+        <span class="ma-win__dots">
+          @for (d of [1, 2, 3, 4]; track d) {
+            <span
+              class="ma-win__dot"
+              [class.ma-win__dot--on]="d <= winnabilityDots(row.winnability)"
+            ></span>
+          }
+        </span>
+        <span class="ma-win__label">{{ row.winnability }}</span>
+      </span>
+    </ng-template>
+
+    <!-- ACTIONS -->
+    <ng-template tableCell="actions" let-row>
+      <app-button
+        variant="action"
+        aria-label="Row actions"
+        class="wq-actions"
+        (click)="onRowActions(row)"
+      >
+        <svg class="ma-actions__icon" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <circle cx="12" cy="5" r="1.5" />
+          <circle cx="12" cy="12" r="1.5" />
+          <circle cx="12" cy="19" r="1.5" />
+        </svg>
+      </app-button>
+    </ng-template>
+  </app-custom-table>
+</div>

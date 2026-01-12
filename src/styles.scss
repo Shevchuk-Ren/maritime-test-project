@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Abstracts
+
+@forward 'styles/abstract/variables';
+@forward 'styles/abstract/mixins';
+
+// Base
+
+@forward 'styles/base/reset';
+@forward 'styles/base/typography';
+@forward 'styles/base/tokens';
+@forward 'styles/base/global';
+
+:host {
+  display: block;
+}

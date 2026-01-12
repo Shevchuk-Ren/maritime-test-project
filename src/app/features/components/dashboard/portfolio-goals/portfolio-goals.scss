@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.pg-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.pg-card-progress {
+  margin-bottom: 10px;
+}

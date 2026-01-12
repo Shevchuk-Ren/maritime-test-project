@@ -1,0 +1,49 @@
+<nav class="navigation" aria-label="Primary navigation">
+  <div #scrollContainer class="nav__scroller" (scroll)="onScroll()">
+    <ul class="" role="list">
+      @for (item of navigationService.navItems(); track item.name) {
+        <li class="">
+          <a
+            class="nav__link"
+            [routerLink]="item.route"
+            routerLinkActive="nav__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <svg class="nav__icon" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path [attr.d]="item.iconPath" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span>{{ item.name }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  @if (showScrollControls()) {
+    <div class="nav__overlay" aria-hidden="true">
+      <button
+        type="button"
+        class="nav__arrow"
+        (click)="scrollLeft()"
+        [disabled]="!canScrollLeft()"
+        aria-label="Scroll left"
+      >
+        <svg class="nav__arrow-icon" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="nav__arrow"
+        (click)="scrollRight()"
+        [disabled]="!canScrollRight()"
+        aria-label="Scroll right"
+      >
+        <svg class="nav__arrow-icon" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  }
+</nav>

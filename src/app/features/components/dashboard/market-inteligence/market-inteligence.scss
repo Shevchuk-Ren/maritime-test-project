@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+.market-list {
+  display: flex;
+  flex-direction: column;
+  .market-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    border-bottom: 1px solid #293245;
+    padding: 8px 0;
+    span {
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+
+      border-radius: 50%;
+
+      flex-shrink: 0;
+    }
+    .red {
+      background-color: red;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .blue {
+      background-color: blue;
+    }
+    p {
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 300;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+}

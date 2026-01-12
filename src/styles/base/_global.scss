@@ -1,0 +1,41 @@
+@use '../abstract/variables' as *;
+
+html {
+  font-family: var(--font-sans);
+  background: var(--bg-page);
+  color: var(--text);
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Focus */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring, 0 0 0 2px rgba(59, 130, 246, 0.5));
+  border-radius: 10px;
+}
+
+.app-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+@media (max-width: 1024px) {
+  .app-container {
+    padding: 0 24px;
+  }
+}

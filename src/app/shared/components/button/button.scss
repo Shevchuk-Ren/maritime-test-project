@@ -1,0 +1,72 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  width: '100%';
+  /* defaults (can be overridden by ngStyle) */
+  height: var(--h-pill);
+  border-radius: var(--r-pill);
+
+  border: 1px solid var(--stroke);
+  background: var(--bg-surface);
+  color: var(--blue);
+
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    opacity 150ms ease;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* primary */
+.btn--primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+/* outline */
+.btn--outline {
+  background: var(--bg-surface);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* tab (default look for tabs, can still override via inputs) */
+.btn--tab {
+  background: var(--bg-elevated);
+  border-color: var(--stroke);
+  color: var(--text-2);
+}
+
+.btn--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--action {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  color: var(--text-2);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.btn--action:hover {
+  background: rgba(255, 255, 255, 0.05);
+}

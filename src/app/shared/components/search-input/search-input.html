@@ -1,0 +1,16 @@
+<input
+  type="text"
+  class="ui-input"
+  [type]="type()"
+  [placeholder]="placeholder()"
+  [ngStyle]="{
+    height: height(),
+    minWidth: minWidth(),
+    border: border(),
+    background: background(),
+    fontSize: fontSize(),
+  }"
+  [value]="value()"
+  (input)="handleInput($event)"
+  (blur)="onTouched()"
+/>

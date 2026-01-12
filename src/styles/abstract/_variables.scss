@@ -1,0 +1,156 @@
+// Design Tokens - Extracted from SVG
+
+$bg-color: #121622;
+
+// // Colors
+$color-ui-bg: #0a0e1a;
+$color-ui-card: #0f1419;
+$color-ui-card-secondary: #1a1f2e;
+$color-ui-card-tertiary: #1e2233;
+$color-ui-hover: #242938;
+$color-ui-border: #313b54;
+$color-ui-border-secondary: #374151;
+
+// Text Colors
+$color-text-primary: #e5e7eb;
+$color-text-secondary: #9ca3af;
+$color-text-muted: #6b7280;
+
+// // Accent Colors
+$color-accent-primary: #3b82f6;
+$color-accent-primary-hover: #2563eb;
+$color-success: #3bb979;
+$color-warning: #fdd261;
+$color-danger: #cc0101;
+$color-info: #3b82f6;
+
+// Spacing Scale
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit * 0.5; // 4px
+$spacing-sm: $spacing-unit; // 8px
+$spacing-md: $spacing-unit * 2; // 16px
+$spacing-lg: $spacing-unit * 3; // 24px
+$spacing-xl: $spacing-unit * 4; // 32px
+$spacing-2xl: $spacing-unit * 6; // 48px
+
+// Typography
+$font-family-base:
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  sans-serif;
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-base: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 32px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Border Radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 23.5px;
+$radius-pill: 9999px;
+
+// Progress Bar (from SVG)
+$progress-bar-height: 25px;
+$progress-bar-radius: 12.5px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Z-index Scale
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-fast: all 0.15s ease-in-out;
+$transition-slow: all 0.3s ease-in-out;
+
+// =======================
+// DESIGN SCALES (SCSS)
+// =======================
+
+// Breakpoints
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;
+
+// Desktop content grid (your app feels like fixed paddings, not full-bleed)
+$container-max: 1440px;
+$page-pad-x: 48px; // matches the roomy desktop feel
+$page-pad-x-compact: 24px; // smaller screens
+
+// Radii
+$radius-card: 23.5px; // primary card radius
+$radius-card-lg: 30px; // big wrapper (Policies block)
+$radius-subcard: 16px; // inner tiles
+$radius-pill: 9999px;
+$radius-pill-47: 23.5px; // 47px height pill
+
+// Heights
+$h-pill-47: 47px;
+$h-btn: 40px;
+$h-bar-lg: 25px; // portfolio bars
+$h-bar: 12px; // distribution bars
+$h-bar-sm: 10px; // small tracks
+
+// Spacing scale (use multiples of 4)
+$sp-1: 4px;
+$sp-2: 8px;
+$sp-3: 12px;
+$sp-4: 16px;
+$sp-5: 20px;
+$sp-6: 24px;
+$sp-7: 28px;
+$sp-8: 32px;
+$sp-9: 36px;
+$sp-10: 40px;
+
+// Typography scale
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-28: 28px;
+$font-size-36: 36px;
+$font-size-52: 52px;
+
+$line-4: 16px;
+$line-5: 20px;
+$line-6: 24px;
+$line-7: 28px;
+
+// Shadows (very subtle, your UI is mostly border-driven)
+$shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+// Focus ring
+$focus-ring: 0 0 0 2px rgba(59, 130, 246, 0.5);

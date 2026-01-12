@@ -1,0 +1,39 @@
+<div class="bar-container">
+  <div class="progress-container">
+    @if (title()) {
+      <h3 class="progress-title">{{ title() }}</h3>
+    }
+    <div
+      class="progress-body"
+      [ngStyle]="{
+        width: width(),
+        height: height(),
+        background: background(),
+        borderRadius: borderRadius(),
+      }"
+    >
+      <div
+        class="progress-fill"
+        [ngStyle]="{
+          width: fillWidth(),
+          height: height(),
+          background: fillColor(),
+          borderRadius: fillBorder(),
+        }"
+      >
+        <span class="progress-text">
+          {{ sumToString() }}
+        </span>
+      </div>
+    </div>
+    <p class="progress-value">
+      <span>
+        {{ fillWidth() }}
+      </span>
+    </p>
+  </div>
+
+  <div class="bar-target">
+    <span>{{ targetToString() }}</span>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<article class="mg">
+  <div class="mg__title">{{ goal().title }}</div>
+
+  <div class="mg__row">
+    <div class="mg__barCol">
+      <div
+        class="mg__bar"
+        [style.height.px]="barH()"
+        [style.border-top-right-radius.px]="r()"
+        [style.border-bottom-right-radius.px]="r()"
+      >
+        <div
+          class="mg__fill"
+          [style.width.%]="clampPct(goal().pct)"
+          [style.border-top-right-radius.px]="r()"
+          [style.border-bottom-right-radius.px]="r()"
+        ></div>
+
+        <div class="mg__badge" [style.left.%]="valueLabelPct()">
+          <span class="mg__badgePill">{{ goal().currentText }}</span>
+        </div>
+      </div>
+
+      <div class="mg__pct">{{ goal().pct }}%</div>
+    </div>
+
+    <div class="mg__target">{{ goal().targetText }}</div>
+  </div>
+</article>

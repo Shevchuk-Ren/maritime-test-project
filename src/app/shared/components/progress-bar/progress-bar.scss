@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+.progress-container {
+  width: 100%;
+}
+.bar-container {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .progress-title {
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .progress-body {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 12px;
+
+    .progress-fill {
+      position: relative;
+      height: 100%;
+      transition:
+        width 0.25s,
+        ease;
+      .progress-text {
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        z-index: 2;
+        pointer-events: none;
+      }
+    }
+  }
+  .progress-value {
+    text-align: center;
+
+    span {
+      font-size: 12px;
+      text-align: center;
+      color: #94a3b8;
+    }
+  }
+  .bar-target {
+    margin-left: 3px;
+  }
+}

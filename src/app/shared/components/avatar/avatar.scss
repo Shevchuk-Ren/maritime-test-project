@@ -1,0 +1,16 @@
+@use '../../../../styles.scss' as *;
+
+:host {
+  display: block;
+}
+.avatar {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: $font-size-22;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.3), rgba(30, 64, 175, 0.5));
+  user-select: none;
+}

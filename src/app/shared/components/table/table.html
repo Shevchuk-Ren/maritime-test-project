@@ -1,0 +1,66 @@
+<div class="ui-table">
+  <div class="ui-table__scroll">
+    <table
+      class="ui-table__table"
+      [class.ui-table__table--fixed]="fixedLayout()"
+      [ngStyle]="tableStyle()"
+    >
+      <colgroup>
+        @for (col of columns(); track col.key) {
+          <col [style.width]="col.width || null" />
+        }
+      </colgroup>
+
+      <thead class="ui-table__thead">
+        <tr class="ui-table__head-row">
+          @for (col of columns(); track col.key) {
+            <th
+              scope="col"
+              class="ui-table__th"
+              [class.ui-table__th--right]="col.align === 'right'"
+              [class.ui-table__th--center]="col.align === 'center'"
+            >
+              @if (col.srOnlyTitle) {
+                <span class="sr-only">{{ col.label }}</span>
+              } @else {
+                {{ col.label }}
+              }
+            </th>
+          }
+        </tr>
+      </thead>
+
+      <tbody class="ui-table__tbody" [class.ui-table__tbody--striped]="striped()">
+        @for (row of tableService.filteredRows(); track $index) {
+          <tr class="ui-table__tr">
+            @for (col of columns(); track col.key) {
+              <td
+                class="ui-table__td"
+                [class.ui-table__td--right]="col.align === 'right'"
+                [class.ui-table__td--center]="col.align === 'center'"
+              >
+                @if (getCellTpl(keyToString(col.key))) {
+                  <ng-container
+                    [ngTemplateOutlet]="getCellTpl(keyToString(col.key))!"
+                    [ngTemplateOutletContext]="{ $implicit: row, col: col }"
+                  />
+                } @else {
+                  {{ cellValue(row, keyToString(col.key)) }}
+                }
+              </td>
+            }
+          </tr>
+        }
+
+        @if (tableService.filteredRows().length === 0) {
+          <tr class="ui-table__tr">
+            <td class="ui-table__empty" [attr.colspan]="columns().length">No data</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <!-- keep projection in DOM so templates are discoverable -->
+    <ng-content></ng-content>
+  </div>
+</div>
