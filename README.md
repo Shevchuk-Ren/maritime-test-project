@@ -84,34 +84,6 @@ This project enforces strict code quality standards:
 **Recommendation:**  
 Run linting and formatting before every commit.
 
----
-
-## Project Structure (High Level)
-
-src/
-└── app/
-├── core/
-│ ├── models/ # Domain & UI models
-│ └── services/ # Application and state services
-│
-├── shared/
-│ └── components/
-│ ├── table/
-│ ├── button/
-│ ├── search-input/
-│ └── add-cards/
-│
-└── features/
-├── dashboard/
-│ ├── work-queue/
-│ ├── my-accounts/
-│ ├── portfolio-goals/
-│ ├── quick-actions/
-│ └── market-intelligence/
-└── accounts/
-│ ├── pages/
-│   ├── dashboard/
-│   ├── accounts/
 
 
 ---
