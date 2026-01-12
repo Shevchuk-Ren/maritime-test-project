@@ -26,7 +26,7 @@ export class MyAccountsComponent implements OnInit {
   constructor(public accounts: MyAccountsService) {}
 
   columns: AccountTableColumn<AccountRow>[] = [
-    { key: 'name', label: 'Account Name/Type', width: '13%' },
+    { key: 'name', label: 'Account Name/Type', width: '16%' },
     { key: 'line', label: 'Line', width: '11%' },
     { key: 'broker', label: 'Broker', width: '10%' },
     { key: 'renewalDate', label: 'Renewal Date', width: '8%' },
@@ -64,6 +64,7 @@ export class MyAccountsComponent implements OnInit {
   }
 
   onGroupClick(): void {
+    console.log('group')
     this.accounts.toggleGroup();
   }
 

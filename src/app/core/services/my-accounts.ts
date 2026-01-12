@@ -84,68 +84,6 @@ export class MyAccountsService {
   readonly sort = this.sortSignal.asReadonly();
   readonly group = this.groupSignal.asReadonly();
 
-  // readonly filteredAccounts = computed(() => {
-  //   const q = this.searchSignal().trim().toLowerCase();
-  //   const filter = this.filterSignal();
-  //   const sort = this.sortSignal();
-  //   const group = this.groupSignal();
-
-  //   let list = this.rowsSignal().slice();
-
-  //   // SEARCH
-  //   if (q) {
-  //     list = list.filter((r) => {
-  //       const hay = [
-  //         r.name,
-  //         r.subtitle,
-  //         r.line,
-  //         r.broker,
-  //         r.status,
-  //         r.appetite,
-  //         r.winnability,
-  //         r.premium,
-  //         r.ratedPremium,
-  //         String(r.lossRatio),
-  //         String(r.triage),
-  //       ]
-  //         .join(' ')
-  //         .toLowerCase();
-
-  //       return hay.includes(q);
-  //     });
-  //   }
-
-  //   // FILTER (cycles All -> Active -> Under review)
-  //   if (filter !== 'all') {
-  //     list = list.filter((r) => r.status === filter);
-  //   }
-
-  //   // GROUP (lightweight: just sort by broker + name, no headers)
-  //   if (group === 'broker') {
-  //     list.sort((a, b) => {
-  //       const byBroker = a.broker.localeCompare(b.broker);
-  //       if (byBroker !== 0) return byBroker;
-  //       return a.name.localeCompare(b.name);
-  //     });
-  //   }
-
-  //   // SORT
-  //   if (sort) {
-  //     const { key, dir } = sort;
-  //     const mult = dir === 'asc' ? 1 : -1;
-
-  //     list.sort((a, b) => {
-  //       const va = this.sortValue(a, key);
-  //       const vb = this.sortValue(b, key);
-  //       if (va < vb) return -1 * mult;
-  //       if (va > vb) return 1 * mult;
-  //       return 0;
-  //     });
-  //   }
-
-  //   return list;
-  // });
-
   readonly filteredAccounts = computed(() => {
     const q = (this.searchSignal() ?? '').trim().toLowerCase();
     const filter = this.filterSignal();
@@ -225,6 +163,7 @@ export class MyAccountsService {
 
   // ===== helpers =====
   private sortValue(row: AccountRow, key: SortKey): number | string {
+    console.log(key, 'key')
     switch (key) {
       case 'renewalDate':
         return this.parseDate(row.renewalDate);
