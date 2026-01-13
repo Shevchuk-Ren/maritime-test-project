@@ -1,0 +1,9 @@
+<span class="win">
+  <span class="win__dots" aria-hidden="true">
+    @for (d of dots; track d) {
+      <span class="win__dot" [class.win__dot--on]="d <= activeDots()"></span>
+    }
+  </span>
+
+  <span class="win__label">{{ winnability() }}</span>
+</span>

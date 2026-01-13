@@ -111,17 +111,7 @@
 
     <!-- WINNABILITY chip -->
     <ng-template tableCell="winnability" let-row>
-      <span class="ma-win">
-        <span class="ma-win__dots">
-          @for (d of [1, 2, 3, 4]; track d) {
-            <span
-              class="ma-win__dot"
-              [class.ma-win__dot--on]="d <= winnabilityDots(row.winnability)"
-            ></span>
-          }
-        </span>
-        <span class="ma-win__label">{{ row.winnability }}</span>
-      </span>
+      <app-winnability-bar winnability="{{ row.winnability }}"> </app-winnability-bar>
     </ng-template>
 
     <!-- ACTIONS -->

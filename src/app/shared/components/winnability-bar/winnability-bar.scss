@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+.win {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+  max-width: 100%;
+}
+.win__dots {
+  display: inline-flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.win__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.35);
+}
+.win__dot--on {
+  background: var(--blue);
+}
+.win__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  white-space: wrap;
+}

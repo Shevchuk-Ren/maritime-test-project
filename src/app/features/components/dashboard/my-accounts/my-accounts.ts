@@ -6,6 +6,7 @@ import { MyAccountsService } from '@core/services/my-accounts';
 import { ButtonComponent } from '@shared/components/button/button';
 import { SearchInputComponent } from '@shared/components/search-input/search-input';
 import { CustomTableComponent, TableCellTemplateDirective } from '@shared/components/table/table';
+import { WinnabilityBarComponent } from '@shared/components/winnability-bar/winnability-bar';
 
 @Component({
   selector: 'app-my-accounts',
@@ -16,6 +17,7 @@ import { CustomTableComponent, TableCellTemplateDirective } from '@shared/compon
     SearchInputComponent,
     ButtonComponent,
     FormsModule,
+    WinnabilityBarComponent,
   ],
   templateUrl: './my-accounts.html',
   styleUrl: './my-accounts.scss',
@@ -71,12 +73,6 @@ export class MyAccountsComponent implements OnInit {
     if (loss < 50) return 'good';
     if (loss < 70) return 'warn';
     return 'bad';
-  }
-
-  winnabilityDots(value: AccountRow['winnability']): number {
-    if (value === 'Very Strong') return 4;
-    if (value === 'Strong') return 3;
-    return 2;
   }
 
   onRowActions(account: AccountRow): void {
