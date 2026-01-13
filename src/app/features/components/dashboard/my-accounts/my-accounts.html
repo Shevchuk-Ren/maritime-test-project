@@ -98,10 +98,7 @@
 
     <!-- STATUS dot + text -->
     <ng-template tableCell="status" let-row>
-      <div class="ma-status">
-        <span class="ma-status__dot" [class.ma-status__dot--green]="row.status === 'Active'"></span>
-        <span class="ma-status__text">{{ row.status }}</span>
-      </div>
+      <app-status-badges status="{{ row.status }}"> </app-status-badges>
     </ng-template>
 
     <!-- TRIAGE pill -->

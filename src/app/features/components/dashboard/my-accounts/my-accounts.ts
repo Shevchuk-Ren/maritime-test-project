@@ -5,6 +5,7 @@ import { InputSearchService } from '@core/services/input-search';
 import { MyAccountsService } from '@core/services/my-accounts';
 import { ButtonComponent } from '@shared/components/button/button';
 import { SearchInputComponent } from '@shared/components/search-input/search-input';
+import { StatusBadgesComponent } from '@shared/components/status-badges/status-badges';
 import { CustomTableComponent, TableCellTemplateDirective } from '@shared/components/table/table';
 import { WinnabilityBarComponent } from '@shared/components/winnability-bar/winnability-bar';
 
@@ -18,6 +19,7 @@ import { WinnabilityBarComponent } from '@shared/components/winnability-bar/winn
     ButtonComponent,
     FormsModule,
     WinnabilityBarComponent,
+    StatusBadgesComponent,
   ],
   templateUrl: './my-accounts.html',
   styleUrl: './my-accounts.scss',
@@ -36,7 +38,7 @@ export class MyAccountsComponent implements OnInit {
     { key: 'ratedPremium', label: 'Rated Premium', width: '6%' },
     { key: 'lossRatio', label: 'Loss Ratio', width: '6%' },
     { key: 'appetite', label: 'Appetite', width: '9%' },
-    { key: 'status', label: 'Status', width: '8%' },
+    { key: 'status', label: 'Status', width: '10%' },
     { key: 'triage', label: 'Triage', width: '5%' },
     { key: 'winnability', label: 'Winnability', width: '14%' },
     { key: 'actions', label: 'Actions', width: '8%', align: 'right', srOnlyTitle: true },

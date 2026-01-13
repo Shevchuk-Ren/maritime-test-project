@@ -153,38 +153,6 @@
   text-overflow: ellipsis;
 }
 
-.wq-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.wq-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 9999px;
-}
-
-.wq-dot--blue {
-  background: var(--blue);
-}
-.wq-dot--yellow {
-  background: var(--yellow);
-}
-.wq-dot--green {
-  background: var(--green);
-}
-.wq-dot--gray {
-  background: var(--muted);
-}
-
-.wq-status__text {
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--text-2);
-  white-space: nowrap;
-}
-
 .wq-actions__icon {
   width: 16px;
   height: 16px;

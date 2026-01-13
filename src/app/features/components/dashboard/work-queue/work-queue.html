@@ -39,10 +39,7 @@
 
     <!-- STATUS (dot + label) -->
     <ng-template tableCell="status" let-row>
-      <div class="wq-status">
-        <span class="wq-dot" [class]="statusDotClass(row.status)"></span>
-        <span class="wq-status__text">{{ statusLabel(row.status) }}</span>
-      </div>
+      <app-status-badges status="{{ row.status }}"> </app-status-badges>
     </ng-template>
 
     <!-- ACTIONS -->

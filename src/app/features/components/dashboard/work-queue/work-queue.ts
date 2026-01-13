@@ -8,6 +8,7 @@ import { TableService } from '@core/services/table';
 import { ButtonComponent } from '@shared/components/button/button';
 import { InitialsPipe } from '@shared/pipes/pipes';
 import { QueueTableColumn, QueueTask } from '@core/models/work-queue';
+import { StatusBadgesComponent } from '@shared/components/status-badges/status-badges';
 
 @Component({
   selector: 'app-work-queue',
@@ -18,6 +19,7 @@ import { QueueTableColumn, QueueTask } from '@core/models/work-queue';
     TableCellTemplateDirective,
     InitialsPipe,
     ButtonComponent,
+    StatusBadgesComponent,
   ],
   templateUrl: './work-queue.html',
   styleUrl: './work-queue.scss',
@@ -66,32 +68,6 @@ export class WorkQueueComponent {
     }
 
     this.table.filterBy((t) => t.type.includes('Referral'));
-  }
-
-  statusLabel(status: Task['status']): string {
-    switch (status) {
-      case 'new':
-        return 'New';
-      case 'pending':
-        return 'Pending Review';
-      case 'completed':
-        return 'Completed';
-      default:
-        return String(status);
-    }
-  }
-
-  statusDotClass(status: Task['status']): string {
-    switch (status) {
-      case 'new':
-        return 'wq-dot--blue';
-      case 'pending':
-        return 'wq-dot--yellow';
-      case 'completed':
-        return 'wq-dot--green';
-      default:
-        return 'wq-dot--gray';
-    }
   }
 
   onRowActions(task: Task): void {
