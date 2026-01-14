@@ -120,36 +120,6 @@
   white-space: nowrap;
 }
 
-/* APPETITE pill (один стиль) */
-.ma-appetite {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  min-width: 86px;
-  padding: 0 16px;
-  border-radius: 9999px;
-  background: rgba(30, 64, 175, 0.3);
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* TRIAGE pill */
-.ma-triage {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  width: 52px;
-  border-radius: 12px;
-  background: rgba(30, 64, 175, 0.3);
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 700;
-}
-
 /* ACTIONS */
 .ma-actions {
   width: 28px;

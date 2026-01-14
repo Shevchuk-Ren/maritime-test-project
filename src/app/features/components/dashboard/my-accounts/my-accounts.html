@@ -91,7 +91,7 @@
 
     <!-- APPETITE pill -->
     <ng-template tableCell="appetite" let-row>
-      <span class="ma-appetite">{{ row.appetite }}</span>
+      <app-custom-pill [title]="row.appetite" variant="appetite"></app-custom-pill>
     </ng-template>
 
     <!-- STATUS dot + text -->
@@ -101,7 +101,7 @@
 
     <!-- TRIAGE pill -->
     <ng-template tableCell="triage" let-row>
-      <span class="ma-triage">{{ row.triage }}</span>
+      <app-custom-pill [title]="row.triage" variant="triage"></app-custom-pill>
     </ng-template>
 
     <!-- WINNABILITY chip -->

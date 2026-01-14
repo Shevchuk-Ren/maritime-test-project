@@ -4,6 +4,7 @@ import { AccountRow, AccountTableColumn } from '@core/models/my-accounts';
 import { InputSearchService } from '@core/services/input-search';
 import { MyAccountsService } from '@core/services/my-accounts';
 import { ButtonComponent } from '@shared/components/button/button';
+import { CustomPillComponent } from '@shared/components/custom-pill/custom-pill';
 import { LossRatioBadgeComponent } from '@shared/components/loss-ratio-badge/loss-ratio-badge';
 import { SearchInputComponent } from '@shared/components/search-input/search-input';
 import { StatusBadgesComponent } from '@shared/components/status-badges/status-badges';
@@ -22,6 +23,7 @@ import { WinnabilityBarComponent } from '@shared/components/winnability-bar/winn
     WinnabilityBarComponent,
     StatusBadgesComponent,
     LossRatioBadgeComponent,
+    CustomPillComponent,
   ],
   templateUrl: './my-accounts.html',
   styleUrl: './my-accounts.scss',
