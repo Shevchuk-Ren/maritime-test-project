@@ -86,12 +86,10 @@
 
     <!-- LOSS RATIO pill -->
     <ng-template tableCell="lossRatio" let-row>
-      <span class="ma-loss" [class]="'ma-loss--' + lossTone(row.lossRatio)">
-        {{ row.lossRatio }}%
-      </span>
+      <app-loss-ratio-badge [lossRatio]="row.lossRatio"> </app-loss-ratio-badge>
     </ng-template>
 
-    <!-- APPETITE pill (один стиль для всіх) -->
+    <!-- APPETITE pill -->
     <ng-template tableCell="appetite" let-row>
       <span class="ma-appetite">{{ row.appetite }}</span>
     </ng-template>

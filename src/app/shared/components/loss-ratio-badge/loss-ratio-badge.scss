@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+.loss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 52px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+.loss--good {
+  background: var(--green);
+}
+.loss--warn {
+  background: var(--yellow);
+  color: #041b2e;
+}
+.loss--bad {
+  background: var(--red);
+}
