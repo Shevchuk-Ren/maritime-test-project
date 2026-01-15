@@ -25,7 +25,6 @@ ul {
       svg {
         width: 23px;
         height: 24px;
-        stroke: var(--blue);
         stroke-width: 1.5;
         flex-shrink: 0;
       }
@@ -54,13 +53,8 @@ ul {
 
 /* List */
 .nav__list {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-flex;
   padding-right: 120px; /* space for overlay arrows */
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
 }
 
 .nav__item {
@@ -91,6 +85,9 @@ ul {
     background-color 150ms ease,
     color 150ms ease,
     border-color 150ms ease;
+  svg {
+    stroke: var(--blue);
+  }
 }
 
 .nav__link:hover {
@@ -109,11 +106,7 @@ ul {
   border-color: var(--blue);
   svg {
     stroke: #fff;
-    color: #000;
   }
-}
-.nav__icon--active {
-  stroke: #fff;
 }
 
 /* Overlay arrows */
@@ -147,6 +140,9 @@ ul {
     background-color 150ms ease,
     opacity 150ms ease;
   cursor: pointer;
+}
+.nav__arrow:not(:first-child) {
+  margin-left: 13px;
 }
 
 .nav__arrow:hover {

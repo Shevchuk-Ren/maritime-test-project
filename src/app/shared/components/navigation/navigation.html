@@ -1,6 +1,6 @@
 <nav class="navigation" aria-label="Primary navigation">
   <div #scrollContainer class="nav__scroller" (scroll)="onScroll()">
-    <ul class="" role="list">
+    <ul class="nav__list" role="list">
       @for (item of navigationService.navItems(); track item.name) {
         <li class="">
           <a
@@ -9,7 +9,13 @@
             routerLinkActive="nav__link--active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <svg class="nav__icon" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+            <svg
+              class="nav__icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <path [attr.d]="item.iconPath" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
             <span>{{ item.name }}</span>

@@ -21,7 +21,7 @@ import { AvatarComponent } from '@shared/components/avatar/avatar';
     InitialsPipe,
     ButtonComponent,
     StatusBadgesComponent,
-    AvatarComponent
+    AvatarComponent,
   ],
   templateUrl: './work-queue.html',
   styleUrl: './work-queue.scss',

@@ -72,20 +72,6 @@
   display: block;
 }
 
-/* Avatar exactly like old gradient chip */
-.app-header__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.3), rgba(30, 64, 175, 0.5));
-  user-select: none;
-}
-
 /* Main */
 .app-main {
   padding: 24px 0;
