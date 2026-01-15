@@ -9,6 +9,7 @@ import { ButtonComponent } from '@shared/components/button/button';
 import { InitialsPipe } from '@shared/pipes/pipes';
 import { QueueTableColumn, QueueTask } from '@core/models/work-queue';
 import { StatusBadgesComponent } from '@shared/components/status-badges/status-badges';
+import { AvatarComponent } from '@shared/components/avatar/avatar';
 
 @Component({
   selector: 'app-work-queue',
@@ -20,6 +21,7 @@ import { StatusBadgesComponent } from '@shared/components/status-badges/status-b
     InitialsPipe,
     ButtonComponent,
     StatusBadgesComponent,
+    AvatarComponent
   ],
   templateUrl: './work-queue.html',
   styleUrl: './work-queue.scss',
@@ -37,12 +39,12 @@ export class WorkQueueComponent {
   }
 
   columns: QueueTableColumn<QueueTask>[] = [
-    { key: 'originator', label: 'Originator', width: '18%' },
+    { key: 'originator', label: 'Originator', width: '24%' },
     { key: 'client', label: 'Client/Line', width: '24%' },
-    { key: 'type', label: 'Type', width: '20%' },
+    { key: 'type', label: 'Type', width: '18%' },
     { key: 'status', label: 'Status', width: '16%' },
-    { key: 'created', label: 'Created', width: '14%' },
-    { key: 'actions', label: 'Actions', width: '8%', align: 'right', srOnlyTitle: true },
+    { key: 'created', label: 'Created', width: '12%' },
+    { key: 'actions', label: 'Actions', width: '7%', align: 'right', srOnlyTitle: true },
   ];
 
   label(category: 'assigned' | 'pending' | 'referrals') {

@@ -22,9 +22,9 @@
     <!-- ORIGINATOR -->
     <ng-template tableCell="originator" let-row>
       <div class="wq-originator">
-        <div class="wq-avatar">
+        <app-avatar variant="originator" >
           {{ row.originator | initials }}
-        </div>
+        </app-avatar>
         <span class="wq-name">{{ row.originator }}</span>
       </div>
     </ng-template>

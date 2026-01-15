@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
+export type AvatarTypes = 'user' | 'originator';
+
 @Component({
   selector: 'app-avatar',
   standalone: true,
@@ -10,9 +12,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent {
-  height = input<string>('48px');
-  width = input<string>('48px');
-  background = input<string>(
-    'linear-gradient(135deg, rgba(30, 64, 175, 0.3), rgba(30, 64, 175, 0.5))',
-  );
+  variant = input<AvatarTypes>('user');
 }
