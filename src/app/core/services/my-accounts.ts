@@ -1,5 +1,5 @@
 import { Injectable, signal, computed } from '@angular/core';
-import { AccountRow, AccountStatus } from '@core/models/my-accounts';
+import { AccountRow, AccountStatus } from '@core/models/dashboard/my-accounts';
 
 type FilterMode = 'all' | AccountStatus;
 type SortKey = 'renewalDate' | 'premium' | 'lossRatio' | 'triage' | 'name';

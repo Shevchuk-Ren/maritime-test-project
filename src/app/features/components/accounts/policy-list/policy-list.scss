@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+.policy-list {
+  display: flex;
+  gap: 10px;
+  &__item {
+    width: 100%;
+    color: #8a8c98;
+  }
+}

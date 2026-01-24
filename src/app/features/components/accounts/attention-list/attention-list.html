@@ -1,0 +1,18 @@
+<app-add-cards>
+  <div class="attention-title">
+    <span>!</span>
+
+    <h2>Needs Attention</h2>
+  </div>
+  <ul class="attention-list">
+    @for (item of attentionList(); track item.id) {
+      <li class="attention-list__item">
+        <h3>
+          {{ item.title }}
+        </h3>
+        <p>{{ item.subtitle }}</p>
+        <a>{{ item.actionText }}</a>
+      </li>
+    }
+  </ul>
+</app-add-cards>

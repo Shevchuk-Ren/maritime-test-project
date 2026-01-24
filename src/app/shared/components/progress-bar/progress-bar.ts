@@ -10,11 +10,12 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressBarComponent {
-  title = input<string | null>('New business target');
+  title = input<string | null>(null);
 
   value = input<number>(0);
   currentSum = input<number>(0);
   targetSum = input<number>(0);
+  showDetails = input<boolean>(true);
 
   width = input<string>('100%');
   height = input<string>('25px');

@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { TableService } from '@core/services/table';
 import { ButtonComponent } from '@shared/components/button/button';
 import { InitialsPipe } from '@shared/pipes/pipes';
-import { QueueTableColumn, QueueTask } from '@core/models/work-queue';
+import { QueueTableColumn, QueueTask } from '@core/models/dashboard/work-queue';
 import { StatusBadgesComponent } from '@shared/components/status-badges/status-badges';
 import { AvatarComponent } from '@shared/components/avatar/avatar';
 

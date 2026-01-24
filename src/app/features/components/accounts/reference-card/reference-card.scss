@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--r-card-lg);
+
+  padding: 26px;
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      margin-bottom: 15px;
+      margin-right: 3px;
+    }
+    &__title {
+      display: inline-block;
+
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    &__dots {
+      margin-left: 17px;
+      &__dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+        background-color: #1e40af;
+        &:not(:last-child) {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: auto;
+  }
+
+  &__basic {
+    border: 1px solid var(--stroke);
+    background-color: #1e2233;
+  }
+  &__grey {
+    border: 1px solid #252a3d;
+    background-color: #252a3d;
+    .header {
+      &__title {
+        font-weight: 400;
+      }
+    }
+  }
+}

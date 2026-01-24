@@ -1,0 +1,84 @@
+:host {
+  display: block;
+}
+.container {
+  display: grid;
+  gap: 23px;
+  grid-template-columns: 22% 22% 22% auto;
+}
+.perfomance-card {
+  &:nth-child(4) {
+    height: auto;
+    align-self: start;
+  }
+
+  &__header {
+    &__title {
+      display: inline-block;
+      margin-right: 17px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 300;
+    }
+    &__dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #1e40af;
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+  &__winabillity {
+    font-size: 38px;
+    font-weight: 300;
+  }
+  &__ratio-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: #8a8c98;
+    span {
+      font-size: 48px;
+      color: #e5e7eb;
+    }
+  }
+  &__premium-disc {
+    font-size: 20px;
+    font-weight: 300;
+    color: #8a8c98;
+    margin-bottom: 38px;
+    span {
+      font-size: 48px;
+      color: #e5e7eb;
+    }
+  }
+  .distribution {
+    align-items: start;
+  }
+  &__policies {
+    width: 100%;
+
+    &__item {
+      display: grid;
+      gap: 23px;
+      grid-template-columns: 60% 40%;
+      margin-bottom: 12px;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    .perfomance-card {
+      &:last-child {
+        align-self: stretch;
+      }
+    }
+  }
+}

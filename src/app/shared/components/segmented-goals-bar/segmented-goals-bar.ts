@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { SegmentedPortfolioGoal } from '@core/models/portfolio-goals';
+import { SegmentedPortfolioGoal } from '@core/models/dashboard/portfolio-goals';
 
 @Component({
   selector: 'app-segmented-goal-bar',

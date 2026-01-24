@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { MoneyPortfolioGoal } from '@core/models/portfolio-goals';
+import { MoneyPortfolioGoal } from '@core/models/dashboard/portfolio-goals';
 
 @Component({
   selector: 'app-money-goal-bar',

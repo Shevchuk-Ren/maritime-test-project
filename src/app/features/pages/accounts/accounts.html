@@ -1,1 +1,19 @@
-<p>accounts works!</p>
+<section class="accounts-hero" aria-label="Accounts overview">
+  <p class="accounts-hero__breadcrumb">
+    Dashboard // Acconuts // <span>{{ currentAccount() }}</span>
+  </p>
+  <app-account-hero class="accounts-hero__hero" title="{{ currentAccount() }}"></app-account-hero>
+  <app-attention-list class="accounts-hero__attention"></app-attention-list>
+</section>
+<section>
+  <app-add-cards title="Perfomance metrics" padding="16px 0" background="" [border]="null">
+    <app-perfomance-metrics [data]="selectedAccount"></app-perfomance-metrics>
+  </app-add-cards>
+  <!-- <app-perfomance-metrics [data]="selectedAccount"></app-perfomance-metrics> -->
+</section>
+<section>
+  <h2>Policies</h2>
+  <app-add-cards padding="16px 28px">
+    <app-policy-list [data]="selectedAccount?.policies"></app-policy-list
+  ></app-add-cards>
+</section>

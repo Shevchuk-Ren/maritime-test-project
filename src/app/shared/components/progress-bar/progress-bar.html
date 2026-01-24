@@ -22,18 +22,18 @@
         }"
       >
         <span class="progress-text">
-          {{ sumToString() }}
+          {{ showDetails() ? sumToString() : '' }}
         </span>
       </div>
     </div>
     <p class="progress-value">
       <span>
-        {{ fillWidth() }}
+        {{ showDetails() ? fillWidth() : '' }}
       </span>
     </p>
   </div>
 
   <div class="bar-target">
-    <span>{{ targetToString() }}</span>
+    <span>{{ showDetails() ? targetToString() : '' }}</span>
   </div>
 </div>

@@ -1,0 +1,12 @@
+@if (data().length) {
+  <ul class="policy-list">
+    @for (item of data(); track item.id) {
+      <li class="policy-list__item">
+        <app-reference-card title="{{ item.label }}" variant="grey" iconUrl="{{ item.iconUrl }}">
+          <p>Premium: {{ item.premium }}</p>
+          <p>Eff date: {{ item.effDate }}</p>
+        </app-reference-card>
+      </li>
+    }
+  </ul>
+}

@@ -1,0 +1,49 @@
+<div class="container">
+  <app-reference-card
+    class="perfomance-card"
+    title="Winnability"
+    [dots]="[1, 2, 3, 4]"
+    linkUrl="./"
+    linkText="See all factors"
+  >
+    <p class="perfomance-card__winabillity">{{ data().winnability }}</p>
+  </app-reference-card>
+
+  <app-reference-card
+    class="perfomance-card"
+    title="Loss Ratio"
+    linkUrl="./"
+    linkText="View history"
+  >
+    <p class="perfomance-card__ratio-title">
+      <span>{{ data().lossRatio }}%</span> vs {{ data().targetRatio }}% target
+    </p>
+  </app-reference-card>
+
+  <app-reference-card
+    class="perfomance-card"
+    title="Premium Growth"
+    linkUrl="./"
+    linkText="View trend"
+  >
+    <div class="perfomance-card__premium-disc">
+      <p>
+        <span>{{ data().premiumGrowth.increase }}%</span> YoY increase
+      </p>
+      <p>{{ data().premiumGrowth.current }} vs {{ data().premiumGrowth.target }} Target</p>
+    </div>
+  </app-reference-card>
+
+  <app-reference-card class="perfomance-card distribution" title="Exposure Distribution">
+    @for (item of data().policies; track item.id) {
+      <ul class="perfomance-card__policies">
+        @if (hasDistribution(item)) {
+          <li class="perfomance-card__policies__item">
+            <app-progress-bar [value]="item.distribution" [showDetails]="false"></app-progress-bar>
+            <span>{{ item.label }}: {{ item.distribution }}%</span>
+          </li>
+        }
+      </ul>
+    }
+  </app-reference-card>
+</div>

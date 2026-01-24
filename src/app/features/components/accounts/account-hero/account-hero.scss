@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+.account-hero {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'logo title title'
+    'logo info lists';
+  row-gap: 4px;
+  column-gap: 5px;
+  h2 {
+    grid-area: title;
+    font-size: 40px;
+    font-weight: 200;
+    margin-left: 19px;
+  }
+  &__logo {
+    grid-area: logo;
+    border-radius: 50%;
+  }
+  &__info {
+    grid-area: info;
+    padding: 10px;
+    margin-left: 19px;
+  }
+  &__list {
+    grid-area: lists;
+    display: flex;
+    width: 100%;
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      margin-right: 44px;
+      padding: 10px;
+      border-left: 1px solid #313b54;
+      h3 {
+        color: #94a3b8;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}

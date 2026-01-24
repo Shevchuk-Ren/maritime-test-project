@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { PortfolioGoal } from '@core/models/portfolio-goals';
+import { PortfolioGoal } from '@core/models/dashboard/portfolio-goals';
 
 @Injectable({ providedIn: 'root' })
 export class PortfolioGoalsService {

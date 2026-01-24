@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+.attention-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fdd261;
+    color: #fdd261;
+  }
+  h2 {
+    font-size: 28px;
+    color: #fdd261;
+    font-weight: 300;
+    margin-left: 12px;
+  }
+}
+.attention-list {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    h3 {
+      font-weight: 300;
+    }
+    p {
+      font-size: 14px;
+      color: #8a8c98;
+    }
+  }
+}

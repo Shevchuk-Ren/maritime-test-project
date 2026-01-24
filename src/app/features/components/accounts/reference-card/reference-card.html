@@ -1,0 +1,23 @@
+<article class="card" [class]="classes()">
+  <div class="header">
+    @if (iconUrl()) {
+      <img class="header__logo" [src]="iconUrl()" alt="{{ title() }}" />
+    }
+    <h3 class="header__title">{{ title() }}</h3>
+    @if (dots().length) {
+      <div class="header__dots">
+        @for (dot of dots(); track dot) {
+          <span class="header__dots__dot"></span>
+        }
+      </div>
+    }
+  </div>
+  <div class="card-content">
+    <ng-content></ng-content>
+  </div>
+  @if (linkUrl()) {
+    <div class="footer">
+      <a [href]="linkUrl()" class="footer__link">{{ linkText() }} →</a>
+    </div>
+  }
+</article>

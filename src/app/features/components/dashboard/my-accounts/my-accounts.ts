@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, effect, OnInit } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
-import { AccountRow, AccountTableColumn } from '@core/models/my-accounts';
+import { AccountRow, AccountTableColumn } from '@core/models/dashboard/my-accounts';
 import { InputSearchService } from '@core/services/input-search';
 import { MyAccountsService } from '@core/services/my-accounts';
 import { ButtonComponent } from '@shared/components/button/button';
