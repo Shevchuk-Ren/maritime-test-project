@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { DotsBarComponent } from '@shared/components/dots-bar/dots-bar';
 
 @Component({
   selector: 'app-reference-card',
-  imports: [],
+  imports: [DotsBarComponent],
   templateUrl: './reference-card.html',
   styleUrl: './reference-card.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,7 +14,7 @@ export class ReferenceCardComponent {
   iconUrl = input<string | undefined>();
 
   title = input<string | undefined>();
-  dots = input<number[]>([]);
+  status = input<string | undefined>();
 
   linkUrl = input<string | undefined>();
   linkText = input<string>('See all factors');
@@ -23,5 +24,9 @@ export class ReferenceCardComponent {
     const v = `card__${this.variant()}`;
 
     return [base, v].join(' ').trim();
+  });
+  dotsActive = computed(() => {
+    const title = this.title();
+    return title === 'Winnability';
   });
 }

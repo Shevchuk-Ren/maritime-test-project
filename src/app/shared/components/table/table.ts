@@ -17,7 +17,7 @@ import { TableService } from '@core/services/table';
   standalone: true,
 })
 export class TableCellTemplateDirective {
-  tableCell = input.required<string>(); 
+  tableCell = input.required<string>();
   constructor(public tpl: TemplateRef<any>) {}
 }
 

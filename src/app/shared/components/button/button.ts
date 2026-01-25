@@ -1,4 +1,3 @@
-
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
 import { NgStyle } from '@angular/common';
 

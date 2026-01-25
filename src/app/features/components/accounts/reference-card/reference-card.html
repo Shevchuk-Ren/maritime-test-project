@@ -4,12 +4,8 @@
       <img class="header__logo" [src]="iconUrl()" alt="{{ title() }}" />
     }
     <h3 class="header__title">{{ title() }}</h3>
-    @if (dots().length) {
-      <div class="header__dots">
-        @for (dot of dots(); track dot) {
-          <span class="header__dots__dot"></span>
-        }
-      </div>
+    @if (dotsActive()) {
+      <app-dots-bar winnability="{{ status() }}" class="header__dots"></app-dots-bar>
     }
   </div>
   <div class="card-content">

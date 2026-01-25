@@ -198,7 +198,7 @@ export class MyAccountsService {
   resetView(): void {
     this.searchSignal.set('');
     this.filterSignal.set('all');
-    this.sortSignal.set({ key: 'renewalDate', dir: 'asc' }); 
+    this.sortSignal.set({ key: 'renewalDate', dir: 'asc' });
     this.groupSignal.set('none');
   }
 }
