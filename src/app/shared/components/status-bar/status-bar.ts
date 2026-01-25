@@ -14,7 +14,7 @@ export class StatusBarComponent {
   steps = ['Submitted', 'Review', 'Quote', 'Bind', 'Issue', 'Renew'];
 
   currentIndex = computed(() => {
-    const status = this.status();
-    return status? this.steps.indexOf(status) : -1;
+    const status = this.status() ?? 'Issue';
+    return this.steps.indexOf(status);
   });
 }
