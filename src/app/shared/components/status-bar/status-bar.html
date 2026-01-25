@@ -1,0 +1,26 @@
+
+  
+
+  <div class="stepper">
+    <ng-container *ngFor="let step of steps; let i = index">
+      
+       <div class="stepper__labels">
+        <div class="stepper__circle" [class.active]="i <= currentIndex()">
+        <span [class.active]="i <= 2">✓</span>
+      </div>
+      <div class="stepper__label" >
+        {{ step }}
+
+      </div>
+        
+      </div>
+
+
+    
+
+    <div class="stepper__line" *ngIf="i < steps.length -1" [class.active]="i <= currentIndex() -1"></div>
+
+    </ng-container>
+  </div>
+
+   

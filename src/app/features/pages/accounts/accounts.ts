@@ -5,6 +5,7 @@ import { PerfomanceMetricsComponent } from '@features/components/accounts/perfom
 import { PortfolioGoalsComponent } from '@features/components/dashboard/portfolio-goals/portfolio-goals';
 import { AddCardsComponent } from '@shared/components/add-cards/add-cards';
 import { PolicyListComponent } from '@features/components/accounts/policy-list/policy-list';
+import { StatusBarComponent } from '@shared/components/status-bar/status-bar';
 
 @Component({
   selector: 'app-accounts',
@@ -14,6 +15,7 @@ import { PolicyListComponent } from '@features/components/accounts/policy-list/p
     PerfomanceMetricsComponent,
     AddCardsComponent,
     PolicyListComponent,
+    StatusBarComponent,
   ],
   templateUrl: './accounts.html',
   styleUrl: './accounts.scss',
