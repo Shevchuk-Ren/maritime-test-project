@@ -10,7 +10,7 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressBarComponent {
-  title = input<string | null>(null);
+  title = input<string | undefined>();
 
   value = input<number>(0);
   currentSum = input<number>(0);

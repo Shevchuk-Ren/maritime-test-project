@@ -11,7 +11,7 @@ export type winType = 'Very Low' | 'Low' | 'Medium' | 'Strong' | 'Very Strong';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WinnabilityBarComponent {
-  winnability = input<winType | any>(null);
+  winnability = input<winType | any>();
 
   readonly totalDots = 4;
   readonly dots = [1, 2, 3, 4] as const;

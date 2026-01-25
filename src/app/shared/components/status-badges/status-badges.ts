@@ -12,7 +12,7 @@ export type statusType = 'New' | 'Pending Review' | 'Under Review' | 'Completed'
 })
 export class StatusBadgesComponent {
   status = input<statusType | string>('new');
-  background = input<string | null>(null);
+  background = input<string | undefined>();
 
   readonly activeDots = computed(() => {
     switch (this.status()) {

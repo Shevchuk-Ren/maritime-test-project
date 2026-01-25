@@ -73,7 +73,7 @@ export class MyAccountsService {
 
   private readonly searchSignal = signal('');
   private readonly filterSignal = signal<FilterMode>('all');
-  private readonly sortSignal = signal<{ key: SortKey; dir: SortDir } | null>({
+  private readonly sortSignal = signal<{ key: SortKey; dir: SortDir } | undefined>({
     key: 'renewalDate',
     dir: 'asc',
   });
@@ -154,7 +154,7 @@ export class MyAccountsService {
 
     if (cur.dir === 'asc') return this.sortSignal.set({ key: 'renewalDate', dir: 'desc' });
 
-    return this.sortSignal.set(null);
+    return this.sortSignal.set(undefined);
   }
 
   toggleGroup(): void {
@@ -198,7 +198,7 @@ export class MyAccountsService {
   resetView(): void {
     this.searchSignal.set('');
     this.filterSignal.set('all');
-    this.sortSignal.set({ key: 'renewalDate', dir: 'asc' }); // або null якщо хочеш "без сорту"
+    this.sortSignal.set({ key: 'renewalDate', dir: 'asc' }); 
     this.groupSignal.set('none');
   }
 }

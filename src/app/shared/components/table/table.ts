@@ -17,7 +17,7 @@ import { TableService } from '@core/services/table';
   standalone: true,
 })
 export class TableCellTemplateDirective {
-  tableCell = input.required<string>(); // column key
+  tableCell = input.required<string>(); 
   constructor(public tpl: TemplateRef<any>) {}
 }
 
@@ -34,7 +34,7 @@ export class CustomTableComponent<T extends object = Record<string, unknown>> {
   columns = input<TableColumn<T>[]>([]);
   data = input<T[]>([]);
 
-  minWidth = input<string | null>(null);
+  minWidth = input<string | undefined>();
   striped = input<boolean>(true);
   fixedLayout = input<boolean>(true);
 

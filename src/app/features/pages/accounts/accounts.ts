@@ -22,7 +22,7 @@ import { StatusBarComponent } from '@shared/components/status-bar/status-bar';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AccountsPage {
-  currentAccount = input<string | null>('Maritime Logistics Corp');
+  currentAccount = input<string | undefined>('Maritime Logistics Corp');
 
   meta = [
     {

@@ -49,8 +49,8 @@ export class SearchInputComponent implements ControlValueAccessor {
   height = input<string>('27px');
   minWidth = input<string>('250px');
   border = input<string>('1px solid var(--input-border)');
-  background = input<string | null>(null);
-  fontSize = input<string | null>(null);
+  background = input<string | undefined>();
+  fontSize = input<string | undefined>();
 
   value = signal<string>('');
 

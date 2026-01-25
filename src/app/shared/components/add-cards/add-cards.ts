@@ -12,5 +12,5 @@ export class AddCardsComponent {
   title = input<string>('');
   padding = input<string>('26px');
   background = input<string>('#1E2233');
-  border = input<string | null>('1px solid var(--stroke)');
+  border = input<string | undefined>();
 }

@@ -10,12 +10,12 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 export class ReferenceCardComponent {
   variant = input<'basic' | 'grey'>('basic');
 
-  iconUrl = input<string | null>(null);
+  iconUrl = input<string | undefined>();
 
-  title = input<string | null>(null);
+  title = input<string | undefined>();
   dots = input<number[]>([]);
 
-  linkUrl = input<string | null>(null);
+  linkUrl = input<string | undefined>();
   linkText = input<string>('See all factors');
 
   classes = computed(() => {
